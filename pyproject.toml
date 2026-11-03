@@ -1,0 +1,55 @@
+[project]
+name = "agentic-ai-for-beginner"
+version = "2026.11.0"
+description = "Code, notebooks and scripts for the Udemy course 'Agentic AI for Beginner' by Unfold Data Science."
+readme = "README.md"
+requires-python = ">=3.12,<3.13"
+# Shared by every lesson: notebook kernel support and .env loading.
+dependencies = [
+    "ipykernel>=6.29.5,<7",
+    "python-dotenv>=1.0.1,<2",
+]
+
+[dependency-groups]
+# Part 1 - Basic_Agent.ipynb (LangChain prompts, chains, tools and a ReAct agent)
+part1 = [
+    "langchain>=0.3.14,<0.4",
+    "langchain-community>=0.3.14,<0.4",
+    "langchain-openai>=0.2.14,<0.4",
+    "langchain-tavily>=0.2,<0.3",
+    "ddgs>=9,<10",
+]
+# Part 2 - First_Multi_Agent.ipynb and CustomerServiceMAS.ipynb (CrewAI)
+part2 = [
+    "crewai>=1.14,<2",
+    "crewai-tools>=1.14,<2",
+]
+# Part 3 - Investment_Analysis_Agentic_System.ipynb (Agno), MAS_Using_MSAutogen.ipynb (AutoGen 0.2)
+#          and Langflow/TestMyAgent.py
+part3 = [
+    "agno>=1.4.4,<2",
+    "openai>=1.66,<2",
+    "yfinance>=0.2.54",
+    "ddgs>=9,<10",
+    "pyautogen==0.2.35",
+    "requests>=2.32",
+    "ipywidgets>=8.1,<9",
+]
+# Part 4 - AWS Bedrock notebooks, Lambda action-group functions and Streamlit apps
+part4 = [
+    "boto3>=1.35",
+    "streamlit>=1.40",
+]
+# Maintainers only (not installed by `uv sync`): uv run --group dev python maintenance/check_repo.py
+dev = [
+    "nbclient>=0.10",
+    "nbformat>=5.10",
+]
+
+[tool.uv]
+package = false
+# `uv sync` installs every lesson into one .venv, so students only set up once.
+default-groups = ["part1", "part2", "part3", "part4"]
+# pyautogen 0.2.35 requires numpy<2, but pyarrow>=26 (used by CrewAI and Streamlit) needs numpy>=2
+# without declaring it. pyarrow 24 was tested with numpy 1.26.
+constraint-dependencies = ["pyarrow<25"]
