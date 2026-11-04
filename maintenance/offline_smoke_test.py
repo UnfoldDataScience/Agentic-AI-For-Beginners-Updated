@@ -12,7 +12,7 @@ What it does
   * Checks a few expected objects per notebook, tests the Lambda handlers with sample events,
     and drives both Streamlit apps with Streamlit's AppTest.
 
-Passing this test does NOT prove that the live services work. See the release report for live tests.
+Passing this test does NOT prove that the live services work. See LIVE_VALIDATION.md for live tests.
 """
 import ast
 import importlib.util

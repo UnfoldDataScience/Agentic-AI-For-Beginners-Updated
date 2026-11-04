@@ -46,6 +46,8 @@ Open any notebook, select the **`.venv`** kernel and run the cells from top to b
 
 AI libraries change quickly. Each notebook starts with a short *Compatibility update* note wherever the code differs from the recorded video.
 
+The `maintenance/` folder is for course maintainers. Students don't need it and can ignore it.
+
 ---
 
 ## 🤝 Stay Connected
