@@ -1,55 +1,49 @@
-## Securely Managing API Keys
+## Keeping Your API Keys Safe
 
-It is crucial **never to save your secret API key directly in your code files**. We store keys in a file called **`.env`** (for "environment") in the course folder. The notebooks read the keys from there, so you never type a key into a notebook.
+Don't put API keys directly in your code files. Anyone who sees the code can use your key, and the charges go to your account. In this course, keys go in a file called **`.env`** (short for "environment") in the course folder, and the notebooks read them from there.
 
-### Part A: Generate Your OpenAI API Key
+### Part A: Create your OpenAI API key
 
-1.  **Create an Account:**
-    * Go to the **[OpenAI Platform website](https://platform.openai.com/)** and sign up or log in. You may need to verify your phone number.
-2.  **Navigate to API Keys:**
-    * Open the **[API Keys page](https://platform.openai.com/api-keys)**.
-3.  **Create a New Key:**
-    * Click **"+ Create new secret key"** and give it a descriptive name (e.g., `course-project-key`).
-4.  **Copy and Save Immediately:**
-    * Your key is displayed **only once**. Copy it straight into your `.env` file (Part B). If you lose it, create a new one.
-5.  **Add Billing (Required for Usage):**
-    * The key will not work until you have a payment method on file. In the **Billing** section, add a payment method and **set a usage limit** (recommended for safety).
+1. Go to the [OpenAI Platform website](https://platform.openai.com/) and sign up or log in. You may need to verify your phone number.
+2. Open the [API Keys page](https://platform.openai.com/api-keys).
+3. Click **+ Create new secret key** and give it a name you'll recognize, such as `course-project-key`.
+4. Copy the key straight into your `.env` file (see Part B). It's shown **only once**. If you lose it, create a new one.
+5. In the **Billing** section, add a payment method. The key won't work without one. It's also worth setting a usage limit.
 
-Other keys used in the course (Groq, Tavily, Langflow) are created the same way - each Part's `readme.md` links to the right page.
+You create the other keys used in the course (Groq, Tavily, Langflow) in a similar way. Each Part's `readme.md` tells you where.
 
-### Part B: The `.env` File
+### Part B: Set up the `.env` file
 
-1.  **Create the `.env` File:**
-    * In the **course folder** (the folder that contains `.env.example`), copy `.env.example` and name the copy **`.env`** - no extension like `.txt`.
-      * macOS / Linux: `cp .env.example .env`
-      * Windows PowerShell: `Copy-Item .env.example .env`
+1. In the **course folder** (the one that contains `.env.example`), copy `.env.example` and name the copy **`.env`**. Make sure it doesn't end in an extension like `.txt`.
+   - macOS / Linux: `cp .env.example .env`
+   - Windows PowerShell: `Copy-Item .env.example .env`
 
-2.  **Add Your API Key:**
-    * Open `.env` in a text editor and replace the placeholder after `=` with your key, for example:
+2. Open `.env` in a text editor and replace the placeholder after `=` with your key. Don't put quotes around it. Then save the file.
 
-    ```
-    OPENAI_API_KEY=paste-your-key-here
-    ```
-    * **Do not use quotes** around the value. Save the file.
+   ```
+   OPENAI_API_KEY=paste-your-key-here
+   ```
 
-3.  **How the Notebooks Load It:**
-    * Every notebook calls `load_dotenv()`, which looks for `.env` in the notebook's folder and then in each parent folder. Because your `.env` is in the course folder, all Parts find it automatically - **you never need to write a file path**.
+### How the notebooks load your key
 
-    ```python
-    import os
-    from dotenv import load_dotenv
+Every notebook calls `load_dotenv()`, which looks for `.env` in the notebook's folder and then in each parent folder. Your `.env` is in the course folder, so all the Parts find it automatically and you don't need to write a file path.
 
-    load_dotenv()  # finds the .env file in this folder or a parent folder
+```python
+import os
+from dotenv import load_dotenv
 
-    if os.getenv("OPENAI_API_KEY"):
-        print("Success! Your OpenAI API key was loaded.")
-    else:
-        print("Failure! The key was NOT loaded. Check that the file is named .env and is in the course folder.")
-    ```
+load_dotenv()  # finds the .env file in this folder or a parent folder
 
-4.  **Keep It Private:**
-    * `.env` is listed in `.gitignore`, so Git will not commit it. Never paste your key into a notebook, screenshot, forum post or Q&A question.
+if os.getenv("OPENAI_API_KEY"):
+    print("OpenAI API key loaded.")
+else:
+    print("Key not found. Check that the file is named .env and is in the course folder.")
+```
 
-### If a Key Leaks
+### Keep it private
 
-Delete (revoke) the key immediately on the provider's website and create a new one. Revoking is the only way to make a leaked key safe.
+`.env` is listed in `.gitignore`, so Git won't commit it. Never paste your key into a notebook, screenshot, forum post or Q&A question.
+
+### If a key leaks
+
+Delete the key on the provider's website right away and create a new one. A leaked key keeps working until you delete it.

@@ -32,21 +32,13 @@ DuckDuckGo search needs no key.
 
 The concepts and flow are unchanged. Small compatibility updates are explained inside the notebook:
 
-* `gpt-3.5-turbo` models → `gpt-4o-mini`
+* `gpt-4o-mini` replaces the `gpt-3.5-turbo` models
 * `ChatOpenAI` is imported from `langchain_openai`
-* `.run(...)` → `.invoke(...)`
+* `.invoke(...)` replaces `.run(...)`
 * Optional Tavily search if DuckDuckGo is rate-limited
-
----
-
-# Included Files
-
-* `Basic_Agent.ipynb` - the lesson notebook
 
 ---
 
 # Tested Environment
 
 Last updated: November 2026 - Python 3.12, LangChain 0.3.
-
-Happy Learning!

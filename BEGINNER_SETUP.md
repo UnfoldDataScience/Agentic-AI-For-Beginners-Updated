@@ -1,6 +1,6 @@
 # Setup Guide for Beginners
 
-New to coding? This guide takes you from nothing installed to running your first AI agent, one step at a time.
+New to coding? This guide walks you through everything, from installing the tools to running your first AI agent.
 You only do this **once**. After that, every notebook in the course works without any further installation.
 
 **Time needed:** about 20-30 minutes, most of it waiting for downloads.
@@ -156,7 +156,7 @@ Never share your `.env` file, and never paste a key into a notebook, a screensho
 
 5. Keep pressing `Shift + Enter` to run the cells from top to bottom.
 
-🎉 That's it - your setup is complete. Every other notebook in the course works the same way: open it, select the `.venv` kernel, and run the cells from top to bottom.
+Your setup is done. Every other notebook in the course works the same way: open it, select the `.venv` kernel, and run the cells from top to bottom.
 
 ---
 
@@ -180,7 +180,3 @@ Open VS Code, then **File → Open Recent** → your course folder. There is not
 | *"Do you trust the authors"* keeps blocking cells | Click **Manage → Workspace Trust** and trust the course folder. |
 
 Still stuck? Post your question in the course Q&A with the **error message** (never your API key) and the notebook name.
-
----
-
-Happy learning!

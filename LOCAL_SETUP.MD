@@ -1,4 +1,4 @@
-# Local Development Environment Setup
+# Local Setup
 
 This guide sets up **one Python environment for the whole course**. You do it once, and every notebook and script in Parts 1-4 runs in it.
 
@@ -48,7 +48,7 @@ Close and reopen your terminal, then check:
 uv --version
 ```
 
-You do **not** need to install Python separately - `uv sync` downloads Python 3.12 automatically if it is missing.
+You don't need to install Python separately. `uv sync` downloads Python 3.12 if it's missing.
 
 ---
 
@@ -180,7 +180,3 @@ ANONYMIZED_TELEMETRY=False
 | CrewAI 1.14 (Part 2) | `CREWAI_DISABLE_TELEMETRY=true` | `OTEL_SDK_DISABLED=true` also works, but it turns off all OpenTelemetry. CrewAI's detailed execution traces are a separate feature, and they are off unless you enable them. |
 | Agno 1.8 (Part 3) | `AGNO_TELEMETRY=false` | |
 | ChromaDB 1.1 (installed with CrewAI) | `ANONYMIZED_TELEMETRY=False` | CrewAI already turns this off for the databases it creates itself. |
-
----
-
-Happy Learning!

@@ -5,13 +5,13 @@ Student setup lives in `BEGINNER_SETUP.md` (new to coding) and `LOCAL_SETUP.MD`.
 The course runs **locally only**, in one `uv` environment. There is no Google Colab version: notebooks contain
 no install cells, no Colab links and no Colab Secrets code (`check_repo.py` enforces this).
 
-## Single source of truth
+## Where things live
 
-| What | Source | Generated from it |
-|---|---|---|
-| Package versions | `pyproject.toml` + `uv.lock` | - |
-| Lessons | One notebook per lesson (original filenames) | - |
-| Settings and keys | `.env.example` (placeholders only) | - |
+| What | Where |
+|---|---|
+| Package versions | `pyproject.toml` + `uv.lock` |
+| Lessons | One notebook per lesson (original filenames) |
+| Settings and keys | `.env.example` (placeholders only) |
 
 `uv sync` is the only supported setup path. There are no `requirements.txt` files to keep in sync.
 

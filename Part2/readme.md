@@ -1,10 +1,10 @@
 # Part 2 - Multi-Agent Systems with CrewAI
 
-Build crews of agents with roles, goals and backstories, give them tasks and tools, and let them collaborate.
+Build crews of agents with roles, goals and backstories, give them tasks and tools, and let them work together.
 
 | Notebook | What it shows |
 |---|---|
-| `First_Multi_Agent.ipynb` | A chef and a nutritionist collaborate on recipes |
+| `First_Multi_Agent.ipynb` | A chef and a nutritionist work together on recipes |
 | `CustomerServiceMAS.ipynb` | Two-level customer support with a web-scraping tool and crew memory |
 
 ---
@@ -32,20 +32,12 @@ No Serper key is needed.
 
 The recorded CrewAI 0.28 can no longer be installed (its tools package depends on `lancedb` versions that were removed from PyPI), so these notebooks use **CrewAI 1.x**. Agents, tasks, crews, tools and `{placeholders}` work the same way. Details are explained inside each notebook:
 
-* `verbose=2` → `verbose=True`, and the console output looks different
+* `verbose=2` is now `verbose=True`, and the console output looks different
 * `First_Multi_Agent.ipynb` uses `gpt-4o-mini` instead of the far more expensive `gpt-4`
 * `CustomerServiceMAS.ipynb` uses CrewAI's default model (`gpt-4.1-mini`); `memory=True` also makes OpenAI embedding calls and stores memory files on your computer
-
----
-
-# Included Files
-
-* `First_Multi_Agent.ipynb`, `CustomerServiceMAS.ipynb` - the lesson notebooks
 
 ---
 
 # Tested Environment
 
 Last updated: November 2026 - Python 3.12, CrewAI 1.14.
-
-Happy Learning!

@@ -1,24 +1,21 @@
-# 🚀 Agentic AI for Beginner – Code & Resources
+# Agentic AI for Beginner: Code and Resources
 
-Welcome! 👋
-
-This repository contains all code samples, Jupyter notebooks, Python scripts, and reference materials for the Udemy course **“Agentic AI for Beginner”** by *Unfold Data Science*.  
-It is designed to help beginners learn Agentic AI concepts in a practical, hands-on way.
+This repository has the code samples, Jupyter notebooks, Python scripts and reference files for the Udemy course **"Agentic AI for Beginner"** by *Unfold Data Science*.
 
 ---
 
-## 📚 What You Will Find in This Repository
+## What's in this repository
 
-- 🧠 **Code examples** used in the course  
-- 📓 **Jupyter notebooks** organized by module  
-- 🗂️ **Supporting files** (JSON, sample prompts, reference docs)  
-- 🤖 **Agent workflows** and Langflow examples  
-- 🔑 Guides on using environment variables (`.env`) and API keys safely  
-- 🛠️ Setup instructions for Python, Jupyter, and LLM integrations  
+- Code examples used in the course
+- Jupyter notebooks, organized by part
+- Supporting files, such as JSON policies and sample prompts
+- A script for calling the agent you build in Langflow
+- Guides for using `.env` files and API keys safely
+- Setup instructions for Python, Jupyter and the LLM integrations
 
 ---
 
-## ⚡ Quick Start
+## Quick start
 
 Everything runs on your own computer, in **one environment for the whole course**:
 
@@ -35,7 +32,7 @@ Open any notebook, select the **`.venv`** kernel and run the cells from top to b
 
 ---
 
-## 🗺️ Course Map
+## Course map
 
 | Part | Lesson notebooks and files | Framework | Keys |
 |---|---|---|---|
@@ -50,17 +47,14 @@ The `maintenance/` folder is for course maintainers. Students don't need it and 
 
 ---
 
-## 🤝 Stay Connected
+## Stay connected
 
-If you enjoyed the course or used this repository, feel free to reach out, follow, or tag me — I’d love to know you learned from our work!
+If this course helped you, I'd love to hear about it. You can reach me here:
 
-**📧 Email:** query.unfolddatascience@gmail.com  
-**🔗 LinkedIn:** https://www.linkedin.com/in/aman-kumar-b4881440/  
-**▶️ YouTube:** https://www.youtube.com/@UnfoldDataScience/videos  
-**📸 Instagram:** unfold_data_science  
-**🐦 Twitter (X):** @unfoldds
+- **Email:** query.unfolddatascience@gmail.com
+- **LinkedIn:** https://www.linkedin.com/in/aman-kumar-b4881440/
+- **YouTube:** https://www.youtube.com/@UnfoldDataScience/videos
+- **Instagram:** unfold_data_science
+- **Twitter (X):** @unfoldds
 
----
-
-Happy learning!  
-Let’s build powerful agentic systems together. ⚡
+Happy learning!

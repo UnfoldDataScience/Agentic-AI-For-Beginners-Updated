@@ -5,6 +5,7 @@
 | `Investment_Analysis_Agentic_System.ipynb` | A team of specialist agents (news sentiment, financial data, deep financials, strategy) coordinated by a team leader, using Agno (formerly phidata) |
 | `MAS_Using_MSAutogen.ipynb` | Microsoft AutoGen: conversable, assistant and user-proxy agents in a sequence of chats with structured JSON summaries |
 | `Langflow/TestMyAgent.py` | Calling the agent you built in Langflow through its API |
+| `fibonacci_series.py` | A small example code file (not used by the notebooks) |
 
 ---
 
@@ -32,7 +33,7 @@
 
 Explained inside each notebook:
 
-* **Investment analysis:** `phidata` is now called **Agno** (`phi.*` → `agno.*`, `Calculator` → `CalculatorTools`), and the team uses Agno's `Team` class. News search now uses **`DuckDuckGoTools`** instead of Google search and Yahoo Finance news, which no longer return results. The prompt analyses the most recent month instead of January 2025.
+* **Investment analysis:** `phidata` is now called **Agno** (`phi.*` imports are now `agno.*`, and `Calculator` is now `CalculatorTools`), and the team uses Agno's `Team` class. News search now uses **`DuckDuckGoTools`** instead of Google search and Yahoo Finance news, which no longer return results. The prompt analyses the most recent month instead of January 2025.
 * **AutoGen:** the recorded Groq model `llama-3.3-70b-versatile` is no longer offered, so the default is `openai/gpt-oss-120b` (change it with `GROQ_MODEL`); summaries are requested with `summary_role: "user"`; the agent explanations are now Markdown cells; no OpenAI key is needed.
 * **Langflow:** your token and flow IDs come from `.env` instead of being written in the script.
 
@@ -40,16 +41,6 @@ Yahoo Finance data and DuckDuckGo results are fetched live and can be rate-limit
 
 ---
 
-# Included Files
-
-* `Investment_Analysis_Agentic_System.ipynb`, `MAS_Using_MSAutogen.ipynb` - the lesson notebooks
-* `Langflow/TestMyAgent.py` - Langflow API client
-* `fibonacci_series.py` - small example code file (not used by the notebooks)
-
----
-
 # Tested Environment
 
 Last updated: November 2026 - Python 3.12, Agno 1.8, AutoGen (pyautogen) 0.2.35.
-
-Happy Learning!

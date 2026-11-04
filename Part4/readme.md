@@ -71,5 +71,3 @@ uv run streamlit run Part4/Call_AWS_Agent_through_UI.py
 # Tested Environment
 
 Last updated: November 2026 - Python 3.12, boto3, Streamlit. Live AWS calls must be tested in your own account.
-
-Happy Learning!
